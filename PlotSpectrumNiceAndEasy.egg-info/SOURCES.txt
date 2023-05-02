@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+PlotSpectrumNiceAndEasy/PlotSpectrumNiceAndEasy.py
+PlotSpectrumNiceAndEasy/__init__.py
+PlotSpectrumNiceAndEasy.egg-info/PKG-INFO
+PlotSpectrumNiceAndEasy.egg-info/SOURCES.txt
+PlotSpectrumNiceAndEasy.egg-info/dependency_links.txt
+PlotSpectrumNiceAndEasy.egg-info/requires.txt
+PlotSpectrumNiceAndEasy.egg-info/top_level.txt
