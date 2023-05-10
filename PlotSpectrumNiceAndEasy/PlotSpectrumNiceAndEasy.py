@@ -7,8 +7,9 @@ import numpy as np
 
 class PlotSpectrumNiceAndEasy(MetrPlot):
     def __init__(self, lw=5, sc_x="linear",sc_y="linear", name_plot=None, x_name="X", y_name="Y",save_name="Plot",x_s=12,y_s=10,
-                    y_l_s=20,x_l_s=20):
+                    y_l_s=20,x_l_s=20,vectorFormat='svg'):
         self.lw = lw
+        self.vectorFormat=vectorFormat
         self.sc_x = sc_x
         self.sc_y = sc_y
         self.name_plot = name_plot
@@ -20,8 +21,9 @@ class PlotSpectrumNiceAndEasy(MetrPlot):
         self.y_l_s = y_l_s
         self.x_l_s = x_l_s
 
-    def main(self, x, y,save=False, **kwargs):
-        mpl.rc('font',family='Times New Roman')
+    def main(self, x, y,save=False,timesNewR=False **kwargs):
+        if timesNewR:
+            mpl.rc('font',family='Times New Roman')
         fig, axs = plt.subplots(figsize=(self.x_s, self.y_s))
         plt.xscale(self.sc_x)
         plt.yscale(self.sc_y)
@@ -62,6 +64,6 @@ class PlotSpectrumNiceAndEasy(MetrPlot):
 
         if save:
             plt.savefig(self.save_name+'.png', format='png', dpi=300)
-            plt.savefig(self.save_name+".svg", format="svg")
+            plt.savefig(self.save_name+'.'+self.vectorFormat, format=self.vectorFormat)
         plt.show()
         return 0
