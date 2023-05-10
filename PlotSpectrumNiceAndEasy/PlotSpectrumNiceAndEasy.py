@@ -21,7 +21,7 @@ class PlotSpectrumNiceAndEasy(MetrPlot):
         self.y_l_s = y_l_s
         self.x_l_s = x_l_s
 
-    def main(self, x, y,save=False,timesNewR=False **kwargs):
+    def main(self, x, y,save=False,timesNewR=False, **kwargs):
         if timesNewR:
             mpl.rc('font',family='Times New Roman')
         fig, axs = plt.subplots(figsize=(self.x_s, self.y_s))
